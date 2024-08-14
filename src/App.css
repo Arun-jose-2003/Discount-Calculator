@@ -1,0 +1,104 @@
+/* Apply a gradient background to the entire page */
+body {
+    background-color: white;
+    /* background: transparent linear-gradient(261deg, #FF7897 0%, #F7A383 44%, #EFC772 73%, #16CF7E 100%) 0% 0% no-repeat; */
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling the input section */
+.input {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    color: #1a2a6c; /* Deep blue text */
+    padding: 20px;
+    text-align: left;
+    width: 500px;
+    height: 450px;
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid #fdbb2d; /* Gold border */
+}
+
+label {
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    text-align: left;
+    color: #1a2a6c; /* Gold color */
+}
+
+input {
+    padding: 10px;
+    width: 480px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #fdbb2d; /* Gold border */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+input ::placeholder {
+    color: #1a2a6c;
+}
+
+/* Styling the button */
+.btn {
+    padding: 10px;
+    width: 480px;
+    height: 50px;
+    cursor: pointer;
+    color: #fdbb2d; /* Gold color */
+    border-radius: 10px;
+    border: solid 3px rgb(12, 12, 12);
+    background-color:  #1a2a6c;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+}
+/* Styling the output section */
+.output {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    color: #1a2a6c; /* Deep blue text */
+    text-align: center;
+    width: 500px;
+    height: 450px;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #fdbb2d; /* Gold border */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for elevation */
+}
+
+/* Specific styling for price */
+.price {
+    color: #1a2a6c; /* Deep blue color */
+    font-size: 1.2em;
+    margin-top: 50px;
+}
+
+.head {
+    text-align: center;
+    color:  #1a2a6c; /* Gold color */
+    /* font-size: 2.5em; */
+}
+
+.discount {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+
+}
+
+.discount p {
+    margin-left: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #1a2a6c; /* Deep blue color */
+}
