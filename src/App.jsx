@@ -8,8 +8,15 @@ function App() {
   const [amount, SetAmount] = useState(0)
   function Calculate() {
     const Discoundrate = (price / 100) * discount;
-    SetDiscoundrate(Math.round(Discoundrate) + Discoundrate)
+    SetDiscoundrate(Math.round(Discoundrate))
     SetAmount(price - Discoundrate)
+  }
+
+  function Reset() {
+    SetPrice(0)
+    SetDiscound(0)
+    SetDiscoundrate(0)
+    SetAmount(0)
   }
 
   return (
@@ -25,10 +32,11 @@ function App() {
         <div className="input col-6">
 
           <label htmlFor="">Enter The Amount</label><br /><br />
-          <input type="text" onChange={(e) => SetPrice(e.target.value)} placeholder='Enter The Amount' /><br /><br />
+          <input type="text" onChange={(e) => SetPrice(e.target.value) } value={price||''} placeholder='Enter The Amount' /><br /><br />
           <label htmlFor="">Discound %</label><br /><br />
-          <input type="text" onChange={(e) => SetDiscound(e.target.value)} placeholder='Discound %' /><br /><br />
+          <input type="text" onChange={(e) => SetDiscound(e.target.value)} value={discount||''} placeholder='Discound %' /><br /><br />
           <button className='btn' onClick={Calculate}>Calculate</button><br />
+          <button className='btn' onClick={Reset}>Reset</button>
 
         </div>
         <div className="output col-6">
@@ -49,7 +57,7 @@ function App() {
 
           </div>
 
-
+          
 
         </div>
       </div>
